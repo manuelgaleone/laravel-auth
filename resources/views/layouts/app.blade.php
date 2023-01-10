@@ -23,8 +23,8 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
+                <!-- Left Side Of Navbar -->
+                <div class="col-6">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="{{url('/') }}">{{ __('Home') }}</a>
@@ -35,7 +35,9 @@
                         </li>
                         @endauth
                     </ul>
-                    <!-- Right Side Of Navbar -->
+                </div>
+                <!-- Right Side Of Navbar -->
+                <div class="col-6 d-flex justify-content-end">
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
@@ -56,7 +58,7 @@
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ url('admin') }}">{{__('Dashboard')}}</a>
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                                         document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
 
