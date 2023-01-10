@@ -7,6 +7,11 @@
             Manuel <br>
             your next favourite Developer.
         </h1>
+        <div class="button_elements d-flex justify-content-center py-5">
+            <a class="btn btn-light" href="{{ route('login') }}">{{ __('Login') }}</a>
+            <a class="btn btn-dark mx-3" href="{{ route('register') }}">{{ __('Registrati') }}</a>
+        </div>
+
     </div>
 </div>
 @endsection
