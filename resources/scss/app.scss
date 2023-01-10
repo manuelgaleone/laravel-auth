@@ -32,6 +32,10 @@
     --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
   
+  .active {
+    color: #5a5c69;
+  }
+
   *,
   *::before,
   *::after {

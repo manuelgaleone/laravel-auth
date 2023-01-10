@@ -36,15 +36,15 @@
 
                     <!-- Nav Item - Dashboard -->
                     <li class="nav-item active">
-                        <a class="nav-link {{ Route::currentRouteName() === 'admin.dashboard' ? 'active' : ''}}"" href=" {{route('admin.dashboard')}}">
+                        <a class="nav-link {{ Route::currentRouteName() === 'admin.dashboard' ? 'text-white' : ''}}" href=" {{route('admin.dashboard')}}">
                             <span>Dashboard</span></a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link {{ Route::currentRouteName() === 'admin.dashboard' ? 'active' : ''}}"" href=" {{route('admin.projects.index')}}">
+                        <a class="nav-link {{ Route::currentRouteName() === 'admin.dashboard' ? 'active' : ''}}" href=" {{route('admin.projects.index')}}">
                             <span>Projects</span></a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link {{ Route::currentRouteName() === 'admin.dashboard' ? 'active' : ''}}"" href=" {{route('admin.dashboard')}}">
+                        <a class="nav-link {{ Route::currentRouteName() === 'admin.dashboard' ? 'active' : ''}}" href=" {{route('admin.projects.create')}}">
                             <span>Create new project</span></a>
                     </li>
                 </ul>
@@ -105,12 +105,9 @@
 
                         <!-- Begin Page Content -->
                         <div class="container-fluid">
-                            <!-- Page Heading -->
-                            <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                                <h1 class="h3 mb-0 text-gray-800 py-4">Dashboard</h1>
-                            </div>
                             @yield('dashboard')
                             @yield('index')
+                            @yield('create')
                         </div>
                         <!-- /.container-fluid -->
 
