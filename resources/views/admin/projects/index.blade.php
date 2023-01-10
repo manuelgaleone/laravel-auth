@@ -14,7 +14,7 @@
                     <h5 class="card-title">{{$project->title}}</h5>
                     <p class="card-text">{{$project->content}}</p>
                     <div class="d-flex align-items-center justify-content-center">
-                        <a class="btn btn-primary">
+                        <a class="btn btn-primary" href="{{route('admin.projects.show', $project->slug)}}">
                             View
                         </a>
                         <a class="btn btn-dark m-2">
