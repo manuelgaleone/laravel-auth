@@ -108,6 +108,7 @@
                             @yield('dashboard')
                             @yield('index')
                             @yield('create')
+                            @yield('edit')
                         </div>
                         <!-- /.container-fluid -->
 

@@ -17,12 +17,14 @@
                         <a class="btn btn-primary" href="{{route('admin.projects.show', $project->slug)}}">
                             View
                         </a>
-                        <a class="btn btn-dark m-2">
+                        <a href="{{route('admin.projects.edit', $project->slug)}}" class="btn btn-dark m-2">
                             Edit
                         </a>
-                        <a class="btn btn-danger">
-                            Delete
-                        </a>
+                        <form action="{{route('admin.projects.destroy', $project->slug)}}" method="post">
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn btn-danger" type="submit">Delete</button>
+                        </form>
                     </div>
                 </div>
             </div>
