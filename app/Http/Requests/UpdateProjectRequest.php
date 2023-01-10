@@ -24,7 +24,23 @@ class UpdateProjectRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'title' => 'required|unique:projects,title|min:10|max:100',
+            'content' => 'required',
+            'slug' => 'unique:projects,slug',
+            'content' => 'required',
+            'thumb' => 'required',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'title.required' => 'Inserisci il titolo!',
+            'title.unique' => "Il titolo dev'essere unico!",
+            'title.min' => "Il titolo deve avere minimo :min caratteri!",
+            'title.max' => "Il titolo deve avere massimo :max caratteri!",
+            'content.required' => 'Inserisci il Contenuto!',
+            'thumb.required' => "Inserisci un'immagine!",
         ];
     }
 }
