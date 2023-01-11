@@ -13,8 +13,9 @@
     </ul>
 </div>
 @endif
-<form action="{{route('admin.projects.store')}}" method="post" class="card p-3">
+<form action="{{route('admin.projects.update', $project->slug)}}" method="post" class="card p-3">
     @csrf
+    @METHOD('PUT')
     <div class="mb-3">
         <input type="text" name="title" id="title" class="form-control" value="{{$project->title}}" aria-describedby="helpId" required>
     </div>

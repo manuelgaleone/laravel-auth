@@ -82,6 +82,8 @@ class ProjectController extends Controller
         $val_data = $request->validated();
 
         $project->update($val_data);
+
+        return to_route('admin.projects.index')->with('message', 'Post edited correctly!');
     }
 
     /**
