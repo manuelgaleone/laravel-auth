@@ -25,6 +25,7 @@ class StoreProjectRequest extends FormRequest
     {
         return [
             'title' => 'required|unique:projects,title|min:10|max:100',
+            'image' => 'nullable|image|max:500',
             'content' => 'required',
             'slug' => 'unique:projects,slug',
             'content' => 'required',
@@ -37,6 +38,7 @@ class StoreProjectRequest extends FormRequest
         return [
             'title.required' => 'Inserisci il titolo!',
             'title.unique' => "Il titolo dev'essere unico!",
+            'image.max' => "L'immagine può avere massimo 500kb!",
             'title.min' => "Il titolo deve avere minimo :min caratteri!",
             'title.max' => "Il titolo deve avere massimo :max caratteri!",
             'content.required' => 'Inserisci il Contenuto!',

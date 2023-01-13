@@ -25,6 +25,7 @@ class UpdateProjectRequest extends FormRequest
     {
         return [
             'title' => 'required|unique:projects,title|min:10|max:100',
+            'image.max' => "L'immagine può avere massimo 500kb!",
             'content' => 'required',
             'slug' => 'unique:projects,slug',
             'content' => 'required',

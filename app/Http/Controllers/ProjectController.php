@@ -43,7 +43,13 @@ class ProjectController extends Controller
         $project_slug = Project::generateSlug($val_data['title']);
         $val_data['slug'] = $project_slug;
         //creo il post
+        $image = Storage::disk('public')->put('project_img', $request->image);
+        $val_data['image'] = $image;
+​
+        //dd($validatedData);
+        $image = Project::create($val_data);
         Project::create($val_data);
+        
         //redirect
         return to_route('admin.projects.index')->with('message', 'Post added correctly!');
     }
