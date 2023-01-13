@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreProjectRequest;
 use App\Http\Requests\UpdateProjectRequest;
 use App\Models\Project;
+use Illuminate\Support\Facades\Storage;
 
 class ProjectController extends Controller
 {
@@ -39,17 +40,22 @@ class ProjectController extends Controller
     {
         //validazione dei dati
         $val_data = $request->validated();
+
+        if ($request->hasFile('image')) {
+            $image = Storage::put('uploads', $val_data['image']);
+            //dd($cover_image);
+            // replace the value of cover_image inside $val_data
+            $val_data['image'] = $image;
+        }
+
         //genera slug
         $project_slug = Project::generateSlug($val_data['title']);
         $val_data['slug'] = $project_slug;
         //creo il post
-        $image = Storage::disk('public')->put('project_img', $request->image);
-        $val_data['image'] = $image;
-​
-        //dd($validatedData);
-        $image = Project::create($val_data);
+
+
+
         Project::create($val_data);
-        
         //redirect
         return to_route('admin.projects.index')->with('message', 'Post added correctly!');
     }
