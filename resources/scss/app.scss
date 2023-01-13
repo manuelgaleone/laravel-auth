@@ -32,6 +32,18 @@
     --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
   
+  .login_wrapper {
+    background: rgb(12,168,147);
+    background: linear-gradient(90deg, rgba(12,168,147,1) 0%, rgba(9,121,121,1) 35%, rgba(0,212,255,1) 100%);
+    background-repeat: no-repeat;
+  }
+
+  .register_wrapper {
+    background: rgb(168,110,12);
+    background: linear-gradient(90deg, rgba(168,110,12,1) 0%, rgba(255,55,111,1) 35%, rgba(243,255,0,1) 100%);
+    background-repeat: no-repeat;
+  }
+
   .active {
     color: #5a5c69;
   }
