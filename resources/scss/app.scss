@@ -33,15 +33,36 @@
   }
   
   .login_wrapper {
-    background: rgb(12,168,147);
-    background: linear-gradient(90deg, rgba(12,168,147,1) 0%, rgba(9,121,121,1) 35%, rgba(0,212,255,1) 100%);
-    background-repeat: no-repeat;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
   }
 
   .register_wrapper {
-    background: rgb(168,110,12);
-    background: linear-gradient(90deg, rgba(168,110,12,1) 0%, rgba(255,55,111,1) 35%, rgba(243,255,0,1) 100%);
-    background-repeat: no-repeat;
+    background: linear-gradient(-45deg, #319b1c, #bb2961, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+  }
+  
+  .jumbotron_wrapper {
+    background: linear-gradient(-45deg, #319b1c, #bb2961, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
 
   .active {
