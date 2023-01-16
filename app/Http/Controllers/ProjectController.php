@@ -41,11 +41,11 @@ class ProjectController extends Controller
         //validazione dei dati
         $val_data = $request->validated();
 
-        if ($request->hasFile('image')) {
-            $image = Storage::put('uploads', $val_data['image']);
+        if ($request->hasFile('thumb')) {
+            $image = Storage::put('uploads', $val_data['thumb']);
             //dd($cover_image);
             // replace the value of cover_image inside $val_data
-            $val_data['image'] = $image;
+            $val_data['thumb'] = $image;
         }
 
         //genera slug
