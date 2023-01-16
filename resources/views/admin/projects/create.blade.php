@@ -21,7 +21,6 @@
     <div class="mb-3">
         <div class="d-flex">
             <input type="file" class="form-control" name="thumb" id="thumb" placeholder="Aggiungi un'immagine" aria-describedby="coverImgHelper">
-
         </div>
     </div>
     <div class="mb-3">

@@ -23,7 +23,7 @@
         <textarea class="form-control" name="content" id="content" rows="3" required>{{$project->content}}</textarea>
     </div>
     <div class="mb-3">
-        <input type="text" class="form-control" name="thumb" id="thumb" value="{{$project->thumb}}" rows="3" required>
+        <input type="file" class="form-control" name="thumb" id="thumb" placeholder="Aggiungi un'immagine" aria-describedby="coverImgHelper">
     </div>
     <button type="submit" class="btn btn-primary">Invia!</button>
 </form>

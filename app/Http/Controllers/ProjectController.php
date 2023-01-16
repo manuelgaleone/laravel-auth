@@ -93,6 +93,18 @@ class ProjectController extends Controller
     {
         $val_data = $request->validated();
 
+        if ($request->hasFile('thumb')) {
+
+            if ($project->thumb) {
+                Storage::delete($project->thumb);
+            }
+
+            $image = Storage::put('uploads', $val_data['thumb']);
+            //dd($cover_image);
+            // replace the value of cover_image inside $val_data
+            $val_data['thumb'] = $image;
+        }
+
         $project->update($val_data);
 
         return to_route('admin.projects.index')->with('message', 'Post edited correctly!');
